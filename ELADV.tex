@@ -51,10 +51,8 @@ The simulations show a strong dependence of the charge sharing mechanism on the 
 Optimal values for the deep implant concentration allow for nearly linear charge sharing between two readout electrodes as a function of the impact position.
 Additionally, the foreseen production technique combining silicon epitaxy and ion beam implantation is outlined.
 }
-
-
-
-\keywords{Detector modelling and simulations II, Hybrid detectors, Solid state detectors, Particle tracking detectors (Solid-state detectors)}
+%FIXME what abuot the first keyword, this points to the PIXEL session? We should remove it now?
+\keywords{Detector modelling and simulations II, Hybrid detectors, Solid state detectors, Particle tracking detectors (Solid-state detectors), Spatial resolution}
 
 
 % if you write for a special issue this may be useful
@@ -68,32 +66,38 @@ Additionally, the foreseen production technique combining silicon epitaxy and io
 \maketitle
 \flushbottom
 
+
 \section{Introduction}
 \label{sec:intro}
-Experiments at possible future colliders like ILC\footnote{International Linear Collider} and CLIC\footnote{Compact Linear Collider} aim for precise measurements of Higgs decay to pairs of b-quarks,
- c-quarks and gluons and efficient identification of top quarks in the decay t$\mathrm{\rightarrow}$Wb.
-For these goals, the experiments require light-weight vertex detectors with a single-point position resolution of a few micrometers. 
-The CLIC project assumes a linear $\mathrm{e^+/e^-}$ accelerator with a center-of-mass energy up to 3~TeV and a luminosity of 2$\mathrm{\cdot10^{34}~cm^{-2}s^{-1}}$~\cite{cdr}.
-The tracker and vertex detectors for CLIC demand a single point resolution of 7~$\muup$m and 3~$\muup$m respectively or better in the transverse plane
- to meet the requirement on the track-momentum resolution and a total silicon sensor thickness less than 200~$\muup$m~\cite{det}.
-Several options for tracking and vertex sensor technology are considered for CLIC.
-Among them are monolithic and hybrid detectors.
+Experiments at possible future colliders like CLIC\footnote{Compact Linear Collider}~\cite{cdr} and ILC\footnote{International Linear Collider}~\cite{ILCcdr} aim, among others,
+ for a precise measurement of Higgs decays to pairs of b-quarks, c-quarks and gluons and efficient identification of top quarks in the decay t$\mathrm{\rightarrow}$Wb.
+To this end, the experiments require light-weight detectors with a single-point resolution of a few micrometers. 
+%The CLIC project assumes a linear $\mathrm{e^+/e^-}$ accelerator with a center-of-mass energy up to 3~TeV and a luminosity of 2$\mathrm{\cdot10^{34}~cm^{-2}s^{-1}}$~\cite{cdr}.
+E.g., the tracker and vertex detectors for CLIC require a single point resolution of better than 7~$\muup$m and 3~$\muup$m, respectively, in the transverse plane
+ to meet the requirements on the track-momentum and impact parameter resolution at a total silicon detector thickness of less than 100~$\muup$m~\cite{det}.
+Several options for tracking and vertex sensor technology are considered for CLIC, among them are monolithic and hybrid detectors~\cite{yellowreport}.
 
-This paper focuses on new type of a hybrid detector aiming to meet the requirements of the CLIC vertex detector.
-A common approach to achieve an improved position resolution in silicon sensors is to decrease the readout cell size or pitch.
-This leads to a large number of readout channels, less logic on-chip per channel and higher power dissipation. 
-Another way to improve the position resolution is to use the charge sharing-effect, i.e. the charge collection by two readout electrodes instead of one.
-The geometric charge sharing has been realized in the CMS experiment by tilting the sensors in the End-Cap~\cite{simon} and using the Lorentz drift induced by a magnetic field in the barrel~\cite{tdr}.
-These two methods do not provide sufficient charge sharing in thin sensors, as either unrealistically strong magnetic fields or huge sensor tilts would be necessary, the latter in turn increasing the material budget.
+This work focuses on a new type of a hybrid detector aiming to meet the requirements of the CLIC vertex detector.
+A common approach to achieve an improved position resolution in silicon detectors is to decrease the readout cell size.
+This leads to an increased number of readout channels and less area for logic per channel on the readout chip.
+Additionally, the miniturisation of interconnection techniques might present limits. 
 
-The hybrid sensor proposed here, a so-called Enhanced Lateral Drift (ELAD) sensor, uses an active lateral charge drift in order to achieve a few-micrometer position resolution without downsizing the pitch of the sensor.
-In the ELAD sensors the bulk structure is manufactured in a way to create an electric field in the lateral direction, thereby forcing the charge carriers to move laterally. 
-This electric field component is created by regions deep within the sensor with a higher doping concentration with respect to the background doping concentration.
+The position resolution can also be improved by means of charge sharing, i.e.\ by collecting the charge on more than one readout electrode.
+Geometric charge sharing is used e.g.\ in the CMS experiment by tilting the sensors in the Endcap~\cite{simon}. 
+Lorentz drift induced charge sharing by means of a magnetic field is realised in the barrel section of the experiment~\cite{cmstdr}.
+However, these two methods do not provide sufficient charge sharing in thin ($\leq 100\,\muup$m) sensors~\cite{yellowreport},
+ as either unrealistically strong magnetic fields or huge sensor tilts would be necessary, the latter in turn increasing the material budget.
+
+The hybrid detector proposed herein, a so-called Enhanced Lateral Drift (ELAD) sensor in combination with a readout ASIC,
+ introduces a lateral electric field component in the sensor bulk yielding a lateral charge drift to achieve a position resolution of a few micrometre. 
+This lateral component of the electric field is created by regions deep within the sensor bulk featuring a higher doping concentration with respect to the background doping concentration.
+This diminishes the need to downsize the sensor pitch while avoiding sensor tilt or magnetic fields. 
 
 SYNOPSYS TCAD simulations of the electric field have been performed to describe the behaviour of the ELAD sensors in 2D and 3D.
-In order to study the performance of the ELAD sensors, transient simulations for the 2D geometry have been executed for p-in-n and n-in-p ELAD sensors,
- allowing analysis of the distribution of the collected charge between neighbouring readout electrodes ($\etaup$-function). 
+In order to study the performance of ELAD sensors, transient simulations of 2D geometries have been executed for n-type and p-type ELAD sensors
+ allowing for the analysis of the distribution of the collected charge on neighbouring readout electrodes as a function of the impact position, also known as $\etaup$-function.
 
+ 
 \section{Concept of the ELAD sensor}
 \label{sec:con}
 Charged particles traversing a silicon sensor create free electron-hole pairs, which drift inside the sensor and follow electric field lines.
@@ -135,6 +139,7 @@ The design of the n-ELAD sensor is shown in Fig.~\ref{fig:geom}, where ``ro'' de
 The orange (blue) areas represent deep n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
 The distance from the top of the sensor to the first deep implant layer is 10\,$\muup$m, the distance between deep implant layers is 10\,$\muup$m, the total thickness of the epitaxial layer amounts to 30\,$\muup$m.
 The pitch for both types of the ELAD is 55\,$\muup$m in order to match the TimePix3 chip footprint~\cite{tp3}.
+
 
 \section{Electric field simulations}
 \label{sec:ef}
@@ -276,6 +281,7 @@ $\etaup$-function for different sizes of the readout electrode for the n-ELAD se
 
 ADD DISCUSSION FOR NEW FIGURE 7
 
+
 \section{ELAD production technique}
 \label{sec:pr}
 The realisation of the ELAD sensors requires a new production process combining several repetitive steps.
@@ -289,6 +295,7 @@ Finally, after the last epitaxial growth, common processes used for standard pla
 As the CVD process imposes a large temperature budget on the implants, the process simulations have been executed in order to quantify a possible effect on the ELAD sensors performance. 
 The results of the process simulations on a deep Boron implant after three 20\,min temperature cycles show a change in the size of the deep implant in a range less than 1\,$\muup$m.
 The electric field and transient simulations have been validated according to this change in size, and show no effect on the $\etaup$-function performance.
+
 
 \section{Conclusions}
 \label{sec:cc}
