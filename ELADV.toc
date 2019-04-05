@@ -1,6 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
-\contentsline {section}{\numberline {2}Concept of the ELAD sensor}{2}{section.2}
-\contentsline {section}{\numberline {3}Electric field TCAD simulations}{3}{section.3}
-\contentsline {section}{\numberline {4}Transient TCAD simulations}{5}{section.4}
-\contentsline {section}{\numberline {5}ELAD production technique}{7}{section.5}
-\contentsline {section}{\numberline {6}Conclusions}{7}{section.6}
