@@ -41,7 +41,7 @@ S.~Spannagel, ``Test beam performance measurements for the phase i upgrade of
   \url{https://doi.org/10.1088%2F1748-0221%2F12%2F05%2Fp05022}
 \BIBentrySTDinterwordspacing
 
-\bibitem{tdr}
+\bibitem{cmstdr}
 \BIBentryALTinterwordspacing
 G.~L. Bayatian \emph{et~al.}, ``{CMS Physics: Technical Design Report Volume 1:
   Detector Performance and Software},'' 2006. [Online]. Available:
@@ -64,9 +64,6 @@ A.~Velyka and H.~Jansen, \emph{Enhanced Lateral Drift Sensors: Concept and
   Singapore, 08 2018, pp. 380--384, proceedings of International Conference on
   Technology and Instrumentation in Particle Physics 2017.
 
-\bibitem{syn}
-``{Synopsys web page},'' \url{https://www.synopsys.com/}.
-
 \bibitem{tp3}
 \BIBentryALTinterwordspacing
 T.~Poikela, J.~Plosila, T.~Westerlund, M.~Campbell, M.~D. Gaspari, X.~Llopart,
@@ -76,5 +73,8 @@ T.~Poikela, J.~Plosila, T.~Westerlund, M.~Campbell, M.~D. Gaspari, X.~Llopart,
   Instrumentation}, vol.~9, no.~05, pp. C05\,013--C05\,013, may 2014. [Online].
   Available: \url{https://doi.org/10.1088%2F1748-0221%2F9%2F05%2Fc05013}
 \BIBentrySTDinterwordspacing
+
+\bibitem{syn}
+``{Synopsys web page},'' \url{https://www.synopsys.com/}.
 
 \end{thebibliography}
