@@ -100,19 +100,19 @@ Finally, the production technique is outlined in Sec.~\ref{sec:pr}.
 
 \section{Concept of the ELAD sensor}
 \label{sec:con}
-Charged particles traversing a silicon sensor create free electron-hole pairs, which drift inside the sensor and follow electric field lines.
-In thin standard planar sensors most of the created charge is collected by the nearest electrode and only a small part by the neighbouring electrode.
-Therefore the position resolution can be improved only by downsizing the distance between strips/pixels, i.e. the pitch size.
+Charged particles traversing a silicon sensor create free electron-hole pairs, which drift inside the sensor following the electric field lines.
+Due to insufficient diffusion in thin, depleted, standard planar sensors the created charge is collected almost entirely by the nearest electrode and only a small fraction of it by the neighbouring electrode.
+Therefore, in this particular case, an improved position resolution is achieved only by downsizing the distance between strips/pixels, i.e. the pitch size.
 
-The concept of the ELAD sensor relies on charge sharing without the necessity of tilting the sensor or on a magnetic field by means of a modification of the electric field,
+The concept of the ELAD sensor relies on a dedicated charge sharing mechanism independent of sensor tilt and magnetic fields by means of local modifications to the electric field,
  yielding a position-dependent charge collection by two electrodes~\cite{hj}.
-To implement this idea the electric field profile has to be altered.
-The modified electric field profile is realised by implants with higher doping concentration with respect to the background doping concentration in the bulk. 
+To this end the electric field profile is altered by implants with higher doping concentration with respect to the background doping concentration of the bulk. 
 This changes the electric field lines in such a way that the charge carriers move towards the centre between two electrodes, and might diffuse into the next unit cell, leading to a partial collection at both electrodes.
-The distribution of the collected charge between two electrodes ($\etaup$-function), where the charge sharing optimises the position resolution, should depend linearly on the MIP position.
-The ELAD sensor contains two types of deep implants: p-implants and n-implants, in order to reduce the impact of the additional implants on $\mathrm{N_{eff}}$~\cite{elad}. 
-With such a balancing of p- and n-implants, the same depletion voltage as in a standard planar sensor with an epitaxial layer of the same background concentration and thickness is achieved.
+An optimal position resolution is achieved if the distribution of the collected charge between two electrodes is a linear function of the MIP position ($\etaup$-function).
+Our realisation of an ELAD sensor contains two types of deep implants: p-implants and n-implants, effectively reducing the impact of the additional fixed charges on $\mathrm{N_{eff}}$~\cite{elad}. 
+With such a balancing of p- and n-implants, the very similar depletion voltage as in a standard planar sensor with an epitaxial layer of the same background concentration and thickness is achieved.
 The utilisation of two types of deep implants also creates a stronger electric field in the lateral direction, thereby improving the charge-sharing behaviour.
+The additional implants, also referred to as deep implants, are arranged in layers forming a trapezoidal area in which the drift is altered. 
 
 \begin{figure}[t]
   \centering
@@ -121,16 +121,16 @@ The utilisation of two types of deep implants also creates a stronger electric f
   \label{fig:geom}
 \end{figure}
 
-Two types of ELAD sensors are designed -- n-in-p (p-ELAD~\cite{elad}) and p-in-n (n-ELAD) sensors. 
-The p-ELAD sensor represents a p-type sensor with three deep implant layers, each containing one deep n-implant in the middle of the unit cell and one p-implant on each side of the n-implant,
- three p-type epitaxial layers (needed due to the production process), moderated p-spray isolation, readout implants and electrodes and a backplane implant and electrode.
-The n-ELAD sensor represents an n-type sensor with three deep implant layers with an inverted doping in each layer with respect to the p-ELAD, three n-type epitaxial layers, readout implants and electrodes and a backplane.
-The deep p- and n-implants create a local electric field in their vicinity and modify the sensor's electric field profile.
-The design of the n-ELAD sensor is shown in Fig.~\ref{fig:geom}, where ``ro'' denotes the readout electrode.
-The orange (blue) areas represent deep n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
+Two types of ELAD sensors have been designed -- p-in-n (n-ELAD) and n-in-p (p-ELAD~\cite{elad}) sensors.
+The n-ELAD sensor represents an n-type sensor with three deep implant layers, each containing one deep p-implant in the middle of the unit cell and one n-implant on each side of the p-implant,
+ three n-type epitaxial layers (needed due to the production process), p-type readout implants and a backplane implant.
+The design of the n-ELAD sensor is shown in Fig.~\ref{fig:geom}, where RO$_{\textrm{left}}$ and RO$_{\textrm{right}}$ denote the two relevant readout electrodes within one unit cell.
+Orange (blue) areas represent deep n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
 The distance from the top of the sensor to the first deep implant layer is 10\,$\muup$m, the distance between deep implant layers is 10\,$\muup$m, the total thickness of the epitaxial layer amounts to 30\,$\muup$m.
-The pitch for both types of the ELAD is 55\,$\muup$m in order to match the TimePix3 chip footprint~\cite{tp3}.
-
+Following the same naming scheme, the p-ELAD sensor represents an p-type sensor with three deep implant layers with an inverted doping in each layer with respect to the n-ELAD, three p-type epitaxial layers,
+ readout implants, moderated p-spray isolation,and a backplane implant.
+The pitch for both types of the ELAD is 55\,$\muup$m in order to match the TimePix3 chip footprint~\cite{tp3}. 
+ 
 
 \section{TCAD simulations}
 \label{sec:sim}
