@@ -223,57 +223,60 @@ The cross section of the 3D electric field profile resembles the one obtained fr
 
 \subsection{Transients}
 \label{sec:tr}
-In transient simulations the response of the device to a traversing particle through the device can be simulated. 
-The transient simulation approximates a continuous process as many consecutive frames with a short time difference. 
-In each frame and for each mesh node TCAD solves the Poisson equation and carrier continuity equations for electrons and holes.
-In order to observe the effect of charge sharing and to avoid the effect of boundary conditions on the edges of the model, a four-unit-cell geometry has been used for the transient simulations. 
-The region of interest extends from the centre of the second readout implant to the next unit cell boundary to the right, which is a half-pitch away.  
-MIP incident positions have been simulated at 0\,$\muup$m, 6.3\,$\muup$m, 11.6\,$\muup$m, 16.9\,$\muup$m, 22.2\,$\muup$m, 27.5\,$\muup$m from the centre of what is referred to as the left implant.
+In transient simulations the response of the device to a traversing particle is simulated. 
+The transient simulation approximates a continuous process as a sequence of frames with a short time difference. 
+In each frame and for each mesh node the Poisson's equation and carrier continuity equations are solved for electrons and holes.
+A four-unit-cells geometry has been used with the region of interest extending from the centre of the second readout implant towards the rightwards next unit cell boundary.  
+MIP incident positions have been simulated at 0\,$\muup$m (centre of \textit{left} readout implant), 6.3\,$\muup$m, 11.6\,$\muup$m, 16.9\,$\muup$m, 22.2\,$\muup$m and 27.5\,$\muup$m (unit cell boundary).
 
 \begin{figure}[t!]
   \centering
-  \includegraphics[width=0.23\textwidth]{figures/tr1.pdf}\put(-40,-15){a) t~=~0\,ns}
-  \includegraphics[width=0.23\textwidth]{figures/tr2.pdf}\put(-40,-15){b) t~=~0.4\,ns}
-  \includegraphics[width=0.23\textwidth]{figures/tr3.pdf}\put(-40,-15){c) t~=~0.8\,ns}
-  \includegraphics[width=0.23\textwidth]{figures/tr4.pdf}\put(-40,-15){d) t~=~2.0\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr1.pdf}\put(-60,-15){a) t~=~2.0\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr1.pdf}\put(-60,-15){a) t~=~0.0\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr2.pdf}\put(-60,-15){b) t~=~0.4\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr3.pdf}\put(-60,-15){c) t~=~0.8\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr4.pdf}\put(-60,-15){d) t~=~2.0\,ns}
   \hfill 
-  \includegraphics[height=6.1cm]{figures/legtr.pdf}
+  \includegraphics[trim= 0 30 0 0, height=6.1cm]{figures/legtr.pdf}
   \caption{
 The hole current density for the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ is shown at four different points in time for a MIP incident of 16.9\,$\muup$m at U~=~280\,V.
 }
   \label{fig:tr}
 \end{figure}
+%FIXME replace first picture with standard sensor at 2.0 ns
 
 In Fig.~\ref{fig:tr} the hole current density in the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ for four time steps is shown.
-In the first two time steps (Fig.~\ref{fig:tr}~(a), (b)) the charge carriers that were created above the deep implants are collected by the nearest electrode.
-Charges created beneath the deep implants (Fig.~\ref{fig:tr}~(c), (d)) change their drift path and move to the centre to possibly diffuse into the next unit cell, allowing for charge sharing.
-Similar results have been produced for the p-ELAD sensor.
+In the first two time steps (Fig.~\ref{fig:tr}~b), c)) the charge carriers created above the deep implants are collected by the nearest, i.e.\ the left electrode.
+Charges created beneath the deep implants change their drift path and move towards the centre (Fig.~\ref{fig:tr}~d), e)) reducing the required diffusion to cross the cell boundary
+ and thereby enabling for charge sharing.
+Congruent results have been obtained for the p-ELAD sensor.
+
+In Fig.~\ref{fig:eta} the collected charge from two neighbouring readout electrodes as a function of the six different MIP positions ($\etaup$-function) is presented.
+The response of the n-ELAD and the p-ELAD sensor with different deep implant concentrations are indicated as
+ circles (triangles) showing the collected charge from the left (right) strip
+ and as crosses corresponding to the sum of the collected charges. 
+For comparison, a sensor with an epitaxial layer but without deep implants (\textit{empty} ELAD) is added. 
+The trend of the $\etaup$-functions depends on the deep implant concentration.
+In the case of the n-ELAD (Fig.~\ref{fig:eta}~a)) the lowest simulated deep implant concentration of 2.0$\mathrm{\cdot10^{15}\,cm^{-3}}$ (black~line) does not yield an optimal $\etaup$-function,
+ however, the effect of the deep implants is already noticeable w.r.t.\ the empty ELAD. 
+The blue line shows the result for the highest deep implant concentration of 3.0$\mathrm{\cdot10^{15}\,cm^{-3}}$. 
+In this case, the deep implants create an electric field in the lateral direction that is too strong, and the effect of the charge sharing is stronger than at the optimum.
+For an applied voltage of 280\,V the optimal deep implant concentration is 2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ approaching the linear behaviour closest for the concentrations under study.
+For the p-ELAD sensor and an applied voltage of 300\,V (see Fig.~\ref{fig:eta}~b)) the optimal deep implant concentration amounts to 2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$.
+Hence, for a given concentration the operational voltage should be carefully chosen to yield an optimal ratio between the electric field strength in the longitudinal and the lateral direction. 
+If the applied voltage is too low (too high) the effect of the charge sharing by the deep implants is too strong (too weak) resulting in a considerable deviation of the $\etaup$-function from the linear case.
+
 
 \begin{figure}[t!]
   \centering
   \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/neladConc.eps}\put(-210,200){a)} \hfill
   \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/peladConc.eps}\put(-210,200){b)}
   \caption[]{
-$\etaup$-function for different deep implant concentrations for the n-ELAD sensor at U~=~280\,V~(a) and p-ELAD sensor at U~=~300\,V~(b).
+$\etaup$-function for different deep implant concentrations for the n-ELAD sensor at U~=~280\,V~(a) and p-ELAD sensor at U~=~300\,V~(b). 
+Continuous lines between data points guide the eye.
 }
   \label{fig:eta}
 \end{figure}
-
-In Fig.~\ref{fig:eta} the collected charge from two neighbouring readout electrodes as a function of the six different MIP positions is presented.
-The p-ELAD and n-ELAD sensors with different deep implant concentrations and a sensor with an epitaxial layer without deep implants are shown. 
-The results for the $\etaup$-function are denoted as follows: circles (triangles) show the collected charge from the left (right) strip, and crosses correspond to the sum of the collected charges. 
-Different deep implant concentrations result in different $\etaup$-functions (Fig.~\ref{fig:eta}).
-The lines represent linear extrapolation to guide the eye.
-
-The linearity of the $\etaup$-functions depends on the deep implant concentration.
-In the case of the n-ELAD (Fig.~\ref{fig:eta}~(a)) the lowest simulated deep implant concentration of 2.0$\mathrm{\cdot10^{15}\,cm^{-3}}$ (black~line) does not yield an optimal change of the $\etaup$-function profile, but the effect of the deep implants is already noticeable. 
-The blue line shows the result for the highest deep implant concentration, which is equal to 3.0$\mathrm{\cdot10^{15}\,cm^{-3}}$. 
-In this case, the deep implants create an electric field in the lateral direction that is too strong, and the effect of the charge sharing is stronger than at the optimum.
-For the applied voltage of 280\,V the optimal deep implant concentration is 2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$.
-For the p-ELAD sensor and an applied voltage of 300\,V (see Fig.~\ref{fig:eta}~(b)) the optimal deep implant concentration with the most linear $\etaup$-function profile is 2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$.
-Hence, for each value of the deep implant concentration an optimal applied voltage exists. 
-The operational voltage should be balanced such that the ratio between the electric field strength in the longitudinal and lateral directions is optimal. 
-If the applied voltage is too low (too high) the effect of the charge sharing by the deep implants is too strong (too weak) resulting in a considerable deviation of the $\etaup$-function from the linear case.
 
 \begin{figure}[t!]
   \centering
@@ -318,7 +321,7 @@ The well-tuned deep-implant structure creates a non-homogeneous electric field.
 Two types of sensors, n-ELAD and p-ELAD sensors, have been presented.
 The electric-field simulations for the 2D and 3D geometries show the electric field in the lateral direction created by the deep implants.
 The electric-field and transient simulations show the dependence of the $\etaup$-function, and hence spatial resolution, in the ELAD sensors on the deep-implant concentration at a fixed pitch size.
-The TCAD simulations show a nearly linear $\etaup$-function for $n\mathrm{_{di}}$~=~2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$ at a bias voltage of U=300\,V for the p-ELAD sensor,
+The TCAD simulations show a nearly linear $\etaup$-function for $n\mathrm{_{di}}$~=~2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$ at a bias voltage of U~=~300\,V for the p-ELAD sensor,
  demonstrating the possibility to obtain almost the theoretical optimum of charge sharing.
 The electric field profiles from 2D and 3D simulations will be used as input for Monte Carlo-based position resolution studies.
 Additionally, new manufacturing technique foreseen for the ELAD prototype production has been presented. 
