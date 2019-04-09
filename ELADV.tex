@@ -51,7 +51,8 @@ The simulations show a strong dependence of the charge sharing mechanism on the 
 Optimal values for the deep implant concentration allow for nearly linear charge sharing between two readout electrodes as a function of the impact position.
 Additionally, the foreseen production technique combining silicon epitaxy and ion beam implantation is outlined.
 }
-%FIXME what abuot the first keyword, this points to the PIXEL session? We should remove it now?
+%FIXME what abuot the first keyword, this points to the PIXEL session? We should remove it now? 
+%No, it was one of the standard keywords from Jinst.
 \keywords{Detector modelling and simulations II, Hybrid detectors, Solid state detectors, Particle tracking detectors (Solid-state detectors), Spatial resolution}
 
 
@@ -203,14 +204,16 @@ Identification of the optimal operational voltage allows an effective usage of t
 
 \begin{figure}[t!]
   \centering
-  \includegraphics[height=6.1cm]{figures/3D1.pdf}\put(-110,15){a)}
+  \includegraphics[height=6.1cm]{figures/3D2.pdf}\put(-110,5){a)}
   \hfill 
-  \includegraphics[height=6.1cm]{figures/3D2.pdf}\put(-110,15){b)}
+  \includegraphics[height=6.1cm]{figures/strip2D.pdf}\put(-100,5){b)}
+  \hfill 
+   \includegraphics[height=6.1cm]{figures/strip3D.pdf}\put(-70,5){c)}
   \hfill 
   \includegraphics[height=6.1cm]{figures/leg3d.pdf}
   \caption{
 3D simulation of an electric field in the lateral direction in the n-ELAD sensor with a deep implant concentration $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$
- with a) a pixel readout and b) a strip readout at U~=~280\,V.}
+ with a) a strip readout, 2D electric field cut of b) 2D simulation b) 3D simulation at U~=~280\,V.}
   \label{fig:3d}
 \end{figure}
 
@@ -218,7 +221,7 @@ Identification of the optimal operational voltage allows an effective usage of t
 The result of the 3D simulation for the strip readout is shown in~Fig.~\ref{fig:3d}.
 In order to optimise the duration of the simulation process a quarter of the unit cell has been modeled exploiting the symmetry of the design.
 The cross section of the 3D electric field profile resembles the one obtained from the 2D simulations, see Fig.~\ref{fig:ef}~(d). 
-%FIXME show the E-field cut of 2D vs 3D instead of pixel field
+
 
 
 \subsection{Transients}
@@ -231,11 +234,11 @@ MIP incident positions have been simulated at 0\,$\muup$m (centre of \textit{lef
 
 \begin{figure}[t!]
   \centering
-  \includegraphics[width=0.185\textwidth]{figures/tr1.pdf}\put(-60,-15){a) t~=~2.0\,ns}
-  \includegraphics[width=0.185\textwidth]{figures/tr1.pdf}\put(-60,-15){a) t~=~0.0\,ns}
-  \includegraphics[width=0.185\textwidth]{figures/tr2.pdf}\put(-60,-15){b) t~=~0.4\,ns}
-  \includegraphics[width=0.185\textwidth]{figures/tr3.pdf}\put(-60,-15){c) t~=~0.8\,ns}
-  \includegraphics[width=0.185\textwidth]{figures/tr4.pdf}\put(-60,-15){d) t~=~2.0\,ns}
+  \includegraphics[width=0.23\textwidth]{figures/transn.pdf}\put(-60,-15){a) t~=~2.0\,ns}
+ % \includegraphics[width=0.185\textwidth]{figures/tr1.pdf}\put(-60,-15){a) t~=~0.0\,ns}
+  \includegraphics[width=0.23\textwidth]{figures/tr2.pdf}\put(-60,-15){b) t~=~0.4\,ns}
+  \includegraphics[width=0.23\textwidth]{figures/tr3.pdf}\put(-60,-15){c) t~=~0.8\,ns}
+  \includegraphics[width=0.23\textwidth]{figures/tr4.pdf}\put(-60,-15){d) t~=~2.0\,ns}
   \hfill 
   \includegraphics[trim= 0 30 0 0, height=6.1cm]{figures/legtr.pdf}
   \caption{
@@ -243,7 +246,7 @@ The hole current density for the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mat
 }
   \label{fig:tr}
 \end{figure}
-%FIXME replace first picture with standard sensor at 2.0 ns
+
 
 In Fig.~\ref{fig:tr} the hole current density in the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ for four time steps is shown.
 In the first two time steps (Fig.~\ref{fig:tr}~b), c)) the charge carriers created above the deep implants are collected by the nearest, i.e.\ the left electrode.
