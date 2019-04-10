@@ -47,8 +47,8 @@ A position-dependent charge sharing allows for an improved interpolation of the 
 
 TCAD-based electric field simulations for 2D and 3D geometries as well as transient simulations with a traversing particle for the 2D geometry have been carried out.
 The electric field profiles have further been optimised for position resolution.
-The simulations show a strong dependence of the charge sharing mechanism on the deep implant concentration.
-Optimal values for the deep implant concentration allow for nearly linear charge sharing between two readout electrodes as a function of the impact position.
+The simulations show a strong dependence of the charge sharing mechanism on the buried implant concentration.
+Optimal values for the buried implant concentration allow for nearly linear charge sharing between two readout electrodes as a function of the impact position.
 Additionally, the foreseen production technique combining silicon epitaxy and ion beam implantation is outlined.
 }
 %FIXME what abuot the first keyword, this points to the PIXEL session? We should remove it now? 
@@ -110,41 +110,48 @@ The concept of the ELAD sensor relies on a dedicated charge sharing mechanism in
 To this end the electric field profile is altered by implants with higher doping concentration with respect to the background doping concentration of the bulk. 
 This changes the electric field lines in such a way that the charge carriers move towards the centre between two electrodes, and might diffuse into the next unit cell, leading to a partial collection at both electrodes.
 An optimal position resolution is achieved if the distribution of the collected charge between two electrodes is a linear function of the MIP position ($\etaup$-function).
-Our realisation of an ELAD sensor contains two types of deep implants: p-implants and n-implants, effectively reducing the impact of the additional fixed charges on $N\mathrm{_{eff}}$~\cite{elad}. 
-With such a balancing of p- and n-implants, the very similar depletion voltage as in a standard planar sensor with an epitaxial layer of the same background concentration and thickness is achieved.
-The utilisation of two types of deep implants also creates a stronger electric field in the lateral direction, thereby improving the charge-sharing behaviour.
-The additional implants, also referred to as deep implants, are arranged in layers forming a trapezoidal area in which the drift is altered. 
+Our realisation of an ELAD sensor contains two types of buried implants: p-implants and n-implants, effectively reducing the impact of the additional fixed charges on $N\mathrm{_{eff}}$~\cite{elad}. 
+With such a balancing of p- and n-implants, a similar depletion voltage as in a standard planar sensor with an epitaxial layer of the same background concentration and thickness is achieved.
+The utilisation of two types of buried implants also creates a stronger electric field in the lateral direction, thereby improving the charge-sharing behaviour.
+The buried implants are arranged in layers forming a trapezoidal area in which the drift is altered. 
 
 \begin{figure}[t]
   \centering
-  \includegraphics[height=8cm]{figures/nelad2.pdf}
-  \caption{Doping concentration of the n-ELAD sensor.}
+  
+  \caption{
+A sketch of the charge sharing mechanism in ELAD sensors. 
+Arrows indicate the direction of the total field strength. 
+}
   \label{fig:geom}
 \end{figure}
 
-Two types of ELAD sensors have been designed -- p-in-n (n-ELAD) and n-in-p (p-ELAD~\cite{elad}) sensors.
-The n-ELAD sensor represents an n-type sensor with three deep implant layers, each containing one deep p-implant in the middle of the unit cell and one n-implant on each side of the p-implant,
- three n-type epitaxial layers (needed due to the production process), p-type readout implants and a backplane implant.
-The design of the n-ELAD sensor is shown in Fig.~\ref{fig:geom}, where RO$_{\textrm{left}}$ and RO$_{\textrm{right}}$ denote the two relevant readout electrodes within one unit cell.
-Orange (blue) areas represent deep n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
-The distance from the top of the sensor to the first deep implant layer is 10\,$\muup$m, the distance between deep implant layers is 10\,$\muup$m, the total thickness of the epitaxial layer amounts to 30\,$\muup$m.
-Following the same naming scheme, the p-ELAD sensor represents an p-type sensor with three deep implant layers with an inverted doping in each layer with respect to the n-ELAD, three p-type epitaxial layers,
- readout implants, moderated p-spray isolation,and a backplane implant.
-The pitch for both types of the ELAD is 55\,$\muup$m in order to match the TimePix3 readout chip footprint~\cite{tp3}. 
+
  
 
 \section{TCAD simulations}
 \label{sec:sim}
+
+Two types of ELAD sensors have been designed -- p-in-n (n-ELAD) and n-in-p (p-ELAD~\cite{elad}) sensors.
+The n-ELAD sensor is formed by an n-type substrate in combination with three n-type epitaxial layers (resulting from the production process),
+ three interjacent buried implant layers, each containing one buried p-implant with its centre in the middle between two readout implants and two adjacent n-implants,
+ p-type readout implants and a backplane implant.
+The design of the n-ELAD sensor is shown in Fig.~\ref{fig:geom}, where RO$_{\textrm{left}}$ and RO$_{\textrm{right}}$ denote the two relevant readout electrodes within one unit cell.
+Orange (blue) areas represent buried n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
+The distance from the top of the sensor to the first buried implant layer is 10\,$\muup$m, the distance between buried implant layers is 10\,$\muup$m, the total thickness of the epitaxial layer amounts to 30\,$\muup$m.
+Analogously, the p-ELAD sensor is formed by a p-type substrate and three p-type epitaxial layers,
+ with three buried implant layers with an inverted doping in each layer with respect to the n-ELAD,
+ n-type readout implants, a moderated p-spray isolation and a backplane implant.
+The pitch for both types of the ELAD is 55\,$\muup$m in order to match the TimePix3 readout chip footprint~\cite{tp3}; the readout implant size amounts initially to 20\,$\muup$m.
 
 The Technology Computer-Aided Design (TCAD) framework by SYNOPSYS is used for the simulation presented herein~\cite{syn}.
 Two types of simulations have been performed: electric field simulations and transient simulations with a MIP traversing the sensor.
 Simulations of the electric field have been performed to describe the behaviour of the ELAD sensors in 2D and 3D.
 In order to study the performance of ELAD sensors, transient simulations of 2D geometries have been executed for n-type and p-type ELAD sensors.
 This allows for the analysis of the distribution of the collected charge on neighbouring readout electrodes as a function of the impact position, also known as $\etaup$-function.
-The parameters which have been optimised to approach a linear behaviour of the $\etaup$-function are: the depth of the first deep implant layer w.r.t.\ sensor surface, the distance between deep implant layers,
- the readout implant size, the bias voltage and the doping concentration of the deep implants. 
+The parameters which have been optimised to approach a linear behaviour of the $\etaup$-function are: the depth of the first buried implant layer w.r.t.\ sensor surface, the distance between buried implant layers,
+ the readout implant size, the bias voltage and the doping concentration of the buried implants. 
 The electric field profile yielding an optimal charge sharing behaviour is obtained via a scan over the specified parameters.
-Here, we detail the optimisation process with respect to the deep implant concentration and the readout implant size.
+Here, we detail the optimisation process with respect to the buried implant concentration and the readout implant size.
 
 
 \subsection{Electric field}
@@ -155,14 +162,15 @@ The voltage is ramped incrementally to a target value; in each step the electric
 
 \begin{figure}[t!]
   \centering
-  \hfill
-  \includegraphics[width=0.20\textwidth]{figures/pssel.pdf}\put(-30,-15){a)}
-  \hfill
+  \includegraphics[width=0.20\textwidth]{figures/nelad2}\put(-30,-15){a)}
+  \includegraphics[width=0.20\textwidth]{figures/pssel.pdf}\put(-30,-15){b)}
+  \includegraphics[width=0.20\textwidth]{figures/nelad2}\put(-30,-15){c)}
   \includegraphics[width=0.20\textwidth]{figures/peladel.pdf}\put(-30,-15){b)}
   \hfill 
   \includegraphics[trim=-40 120 0 0, height=6.1cm]{figures/legel.pdf}
   \caption{
-The electric field lines for a) a standard planar n-type sensor and b) the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$~(b) at U~=~280\,V is shown.
+Doping concentration of a) a standard planer sensor and c) the n-ELAD sensor is shown. 
+The electric field lines for b) a standard planar n-type sensor and d) the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$~(b) at U~=~280\,V.
 }
   \label{fig:el}
 \end{figure}
@@ -171,7 +179,7 @@ In Fig.~\ref{fig:el} the total electric field with its electric field lines is p
  with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
 The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
 In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
-Hence, the deep implants create a lateral electric field in the bulk of the sensor rendering a position-dependent charge sharing possible.
+Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
 
 
 \begin{figure}[b!]
@@ -183,23 +191,23 @@ Hence, the deep implants create a lateral electric field in the bulk of the sens
   \includegraphics[width=0.18\textwidth]{figures/elf_4.pdf}\put(-30,-15){e)}
   \includegraphics[trim=-40 120 0 0, height=6cm]{figures/elfleg.pdf}
   \caption{
-The lateral electric field component for a) a standard planar n-sensor and b) - e) the n-ELAD sensors with increasing deep implant concentrations (see text) at U~=~280\,V is shown.
+The lateral electric field component for a) a standard planar n-sensor and b) - e) the n-ELAD sensors with increasing buried implant concentrations (see text) at U~=~280\,V is shown.
 }
   \label{fig:ef}
 \end{figure}
 
 Figure~\ref{fig:ef} shows the electric field profile in the lateral direction for a) a standard, planar n-type sensor
- and b) - e) the n-ELAD sensor with different deep implant concentrations
+ and b) - e) the n-ELAD sensor with different buried implant concentrations
   $n\mathrm{_{di}}$ of 2.0$\mathrm{\cdot10^{15}\,cm^{-3}}$, 2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$, 2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ and 3.0$\mathrm{\cdot10^{15}\,cm^{-3}}$, respectively.
 Red (blue) areas indicate a hole drift component to the right (left).
 %While drifting close to the unit cell boundary the holes have a sufficiently high probability of diffusing into the next unit cell.
 %Hence, holes are collected by two electrodes.
-Equivalently in the case of the p-ELAD sensors, the electron drift paths are influenced by the deep implants.
+Equivalently in the case of the p-ELAD sensors, the electron drift paths are influenced by the buried implants.
 
-The deep implants create a defined electric field in the lateral direction. 
-With increasing doping concentration of the deep implants the lateral electric field becomes stronger and its effect on the drift paths of the charge carriers larger.
+The buried implants create a defined electric field in the lateral direction. 
+With increasing doping concentration of the buried implants the lateral electric field becomes stronger and its effect on the drift paths of the charge carriers larger.
 The electric field in the longitudinal direction is created by the applied voltage. 
-The ratio between the longitudinal and lateral components of the electric field changes with the applied voltage and deep implant concentrations.
+The ratio between the longitudinal and lateral components of the electric field changes with the applied voltage and buried implant concentrations.
 Identification of the optimal operational voltage allows an effective usage of the ELAD sensor.
 
 \begin{figure}[t!]
@@ -212,14 +220,14 @@ Identification of the optimal operational voltage allows an effective usage of t
   \hfill 
   \includegraphics[height=6.1cm]{figures/leg3d.pdf}
   \caption{
-3D simulation of an electric field in the lateral direction in the n-ELAD sensor with a deep implant concentration $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$
- with a) a strip readout, 2D electric field cut of b) 2D simulation b) 3D simulation at U~=~280\,V.}
+3D simulation of an electric field in the lateral direction in the n-ELAD sensor with a buried implant concentration $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$
+ with a) a strip readout, 2D electric field cut of b) 2D simulation b) 3D simulation at $U~=~280\,$V.}
   \label{fig:3d}
 \end{figure}
 
 3D electric fields simulations with strip and pixel readouts have been carried out to verify 2D electric field simulations.
 The result of the 3D simulation for the strip readout is shown in~Fig.~\ref{fig:3d}.
-In order to optimise the duration of the simulation process a quarter of the unit cell has been modeled exploiting the symmetry of the design.
+In order to optimise the duration of the simulation process a quarter of the unit cell has been modelled exploiting the symmetry of the design.
 The cross section of the 3D electric field profile resembles the one obtained from the 2D simulations, see Fig.~\ref{fig:ef}~(d). 
 
 
@@ -234,11 +242,11 @@ MIP incident positions have been simulated at 0\,$\muup$m (centre of \textit{lef
 
 \begin{figure}[t!]
   \centering
-  \includegraphics[width=0.23\textwidth]{figures/transn.pdf}\put(-60,-15){a) t~=~2.0\,ns}
- % \includegraphics[width=0.185\textwidth]{figures/tr1.pdf}\put(-60,-15){a) t~=~0.0\,ns}
-  \includegraphics[width=0.23\textwidth]{figures/tr2.pdf}\put(-60,-15){b) t~=~0.4\,ns}
-  \includegraphics[width=0.23\textwidth]{figures/tr3.pdf}\put(-60,-15){c) t~=~0.8\,ns}
-  \includegraphics[width=0.23\textwidth]{figures/tr4.pdf}\put(-60,-15){d) t~=~2.0\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr1_pp.pdf}\put(-60,-15){a) t~=~0.0\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr2_pp.pdf}\put(-60,-15){b) t~=~0.4\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr3_pp.pdf}\put(-60,-15){c) t~=~0.8\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/tr4_pp.pdf}\put(-60,-15){d) t~=~2.0\,ns}
+  \includegraphics[width=0.185\textwidth]{figures/transn_pp.pdf}\put(-60,-15){e) t~=~2.0\,ns}
   \hfill 
   \includegraphics[trim= 0 30 0 0, height=6.1cm]{figures/legtr.pdf}
   \caption{
@@ -249,25 +257,27 @@ The hole current density for the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mat
 
 
 In Fig.~\ref{fig:tr} the hole current density in the n-ELAD sensor with $n\mathrm{_{di}}$~=~2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ for four time steps is shown.
-In the first two time steps (Fig.~\ref{fig:tr}~b), c)) the charge carriers created above the deep implants are collected by the nearest, i.e.\ the left electrode.
-Charges created beneath the deep implants change their drift path and move towards the centre (Fig.~\ref{fig:tr}~d), e)) reducing the required diffusion to cross the cell boundary
+In the first two time steps (Fig.~\ref{fig:tr}~a), b)) the charge carriers created above the buried implants are collected by the nearest, i.e.\ the left electrode.
+Charges created beneath the buried implants change their drift path and move towards the centre (Fig.~\ref{fig:tr}~c), d)) reducing the required diffusion to cross the cell boundary
  and thereby enabling for charge sharing.
 Congruent results have been obtained for the p-ELAD sensor.
+For comparison, Fig.~\ref{fig:tr}~e) shows a standard planar sensor at $t~=~2.0\,$ns with the MIP traversing at the same position and no charge sharing can be observed.
+In the following part, we exemplify the optimisation process for two of the ELAD parameters at the example of the buried layer concentration and the readout implant size. 
 
 In Fig.~\ref{fig:eta} the collected charge from two neighbouring readout electrodes as a function of the six different MIP positions ($\etaup$-function) is presented.
-The response of the n-ELAD and the p-ELAD sensor with different deep implant concentrations are indicated as
+The response of the n-ELAD and the p-ELAD sensor with different buried implant concentrations are indicated as
  circles (triangles) showing the collected charge from the left (right) strip
  and as crosses corresponding to the sum of the collected charges. 
-For comparison, a sensor with an epitaxial layer but without deep implants (\textit{empty} ELAD) is added. 
-The trend of the $\etaup$-functions depends on the deep implant concentration.
-In the case of the n-ELAD (Fig.~\ref{fig:eta}~a)) the lowest simulated deep implant concentration of 2.0$\mathrm{\cdot10^{15}\,cm^{-3}}$ (black~line) does not yield an optimal $\etaup$-function,
- however, the effect of the deep implants is already noticeable w.r.t.\ the empty ELAD. 
-The blue line shows the result for the highest deep implant concentration of 3.0$\mathrm{\cdot10^{15}\,cm^{-3}}$. 
-In this case, the deep implants create an electric field in the lateral direction that is too strong, and the effect of the charge sharing is stronger than at the optimum.
-For an applied voltage of 280\,V the optimal deep implant concentration is 2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ approaching the linear behaviour closest for the concentrations under study.
-For the p-ELAD sensor and an applied voltage of 300\,V (see Fig.~\ref{fig:eta}~b)) the optimal deep implant concentration amounts to 2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$.
+For comparison, a sensor with an epitaxial layer but without buried implants (\textit{empty} ELAD) is added. 
+The trend of the $\etaup$-functions depends on the buried implant concentration.
+In the case of the n-ELAD (Fig.~\ref{fig:eta}~a)) the lowest simulated buried implant concentration of 2.0$\mathrm{\cdot10^{15}\,cm^{-3}}$ (black~line) does not yield an optimal $\etaup$-function,
+ however, the effect of the buried implants is already noticeable w.r.t.\ the empty ELAD. 
+The blue line shows the result for the highest buried implant concentration of 3.0$\mathrm{\cdot10^{15}\,cm^{-3}}$. 
+In this case, the buried implants create an electric field in the lateral direction that is too strong, and the effect of the charge sharing is stronger than at the optimum.
+For an applied voltage of 280\,V the optimal buried implant concentration is 2.8$\mathrm{\cdot10^{15}\,cm^{-3}}$ approaching the linear behaviour closest for the concentrations under study.
+For the p-ELAD sensor and an applied voltage of 300\,V (see Fig.~\ref{fig:eta}~b)) the optimal buried implant concentration amounts to 2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$.
 Hence, for a given concentration the operational voltage should be carefully chosen to yield an optimal ratio between the electric field strength in the longitudinal and the lateral direction. 
-If the applied voltage is too low (too high) the effect of the charge sharing by the deep implants is too strong (too weak) resulting in a considerable deviation of the $\etaup$-function from the linear case.
+If the applied voltage is too low (too high) the effect of the charge sharing by the buried implants is too strong (too weak) resulting in a considerable deviation of the $\etaup$-function from the linear case.
 
 
 \begin{figure}[t!]
@@ -275,7 +285,7 @@ If the applied voltage is too low (too high) the effect of the charge sharing by
   \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/neladConc.eps}\put(-210,200){a)} \hfill
   \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/peladConc.eps}\put(-210,200){b)}
   \caption[]{
-$\etaup$-function for different deep implant concentrations for the n-ELAD sensor at U~=~280\,V~(a) and p-ELAD sensor at U~=~300\,V~(b). 
+The $\etaup$-function for different buried implant concentrations for a) the n-ELAD sensor at U~=~280\,V and b) p-ELAD sensor at U~=~300\,V. 
 Continuous lines between data points guide the eye.
 }
   \label{fig:eta}
@@ -286,44 +296,44 @@ Continuous lines between data points guide the eye.
   \includegraphics[trim={1.cm 0cm 1.cm 0cm}, width = 0.48\textwidth]{figures/neladRO.eps}\put(-210,200){a)} \hfill
   \includegraphics[trim={1.cm 0cm 1.cm 0cm}, width = 0.48\textwidth]{figures/peladRO.eps}\put(-210,200){b)}
   \caption[]{
-$\etaup$-function for different sizes of the readout implant for the a) n-ELAD sensor at  U~=~275\,V and b) p-ELAD sensor at U~=~300\,V.
+The $\etaup$-function for different sizes of the readout implant for a) the n-ELAD sensor at U~=~275\,V and b) the p-ELAD sensor at U~=~300\,V.
 }
   \label{fig:rosize}
 \end{figure}
 
-To study the effect of the readout implant size on the $\etaup$-function profile several options of the readout implant sizes have been simulated. 
-In Fig.~\ref{fig:rosize} the transient simulation results for the n-ELAD~(a) and p-ELAD~(b) sensors with different readout implant sizes are shown.
-The simulated readout implant sizes are 20\,$\muup$m, 26\,$\muup$m, 30\,$\muup$m and 40\,$\muup$m.
-The deep implant concentration in the n-ELAD and p-ELAD sensors is $\mathrm{n_{di}}$~=~3$\mathrm{\cdot10^{15}\,cm^{-3}}$ and the bias voltage is 275\,V and 300\,V respectively. 
-The black solid line in Fig.~\ref{fig:rosize} denotes the 20\,$\muup$m readout implant size option for both n-ELAD and p-ELAD sensors, which was used for the simulations presented above.
-The black dash line shows the n-ELAD and p-ELAD sensors with the zero deep implant concentration and readout implant size of 20\,$\muup$m, which corresponds to the sensors with an epitaxial layer without deep implants.
-For the n-ELAD as well as for the p-ELAD sensors the size of the readout implant greatly changes the linearity of the $\etaup$-function.
-The blue line in Fig.~\ref{fig:rosize}~(a)~and~(b) corresponds to the larger readout implant size of 40\,$\muup$m, the charge sharing effect in this option is weakest, it follows that with increasing of the readout implant the effect of the charge sharing decreases.  
-Thus, the size of the readout cell is another parameter for tuning the shape of the $\etaup$-function with different deep implants concentrations.
+To study the effect of the readout implant size on the $\etaup$-function several readout implant sizes have been simulated at $n\mathrm{_{di}}$~=~3.0$\mathrm{\cdot10^{15}\,cm^{-3}}$. 
+In Fig.~\ref{fig:rosize} the transient simulation results for a) the n-ELAD and b) the p-ELAD sensor are shown.
+The simulated readout implant sizes are 20\,$\muup$m (black continuous lines), 26\,$\muup$m, 30\,$\muup$m and 40\,$\muup$m (blue lines).
+The buried implant concentration in the n-ELAD and p-ELAD sensors is $\mathrm{n_{di}}$~=~3$\mathrm{\cdot10^{15}\,cm^{-3}}$ and the bias voltage is 275\,V and 300\,V, respectively. 
+The black dashed lines show the n-ELAD and p-ELAD sensors with the zero buried implant concentration and readout implant size of 20\,$\muup$m, corresponding to empty ELAD sensors.
+For both the n-ELAD and the p-ELAD sensors the size of the readout implant impacts the shape of the $\etaup$-function.
+At the largest studied readout implant size of 40\,$\muup$m, the charge sharing effect is weakest.
+With increasing size of the readout implant the effect of the charge sharing decreases.  
+Thus, the size of the readout cell is another parameter for tuning the shape of the $\etaup$-function in ELAD sensors.
 
 \section{ELAD production technique}
 \label{sec:pr}
 The realisation of the ELAD sensors requires a new production process combining several repetitive steps.
 Each step includes an ion beam surface implantation and epitaxial growth using the CVD\footnote{Chemical Vapor Deposition} method. 
 
-The first step of production is a surface ion implantation of the first layer of deep implants on a silicon wafer.
+The first step of production is a surface ion implantation of the first layer of buried implants on a silicon wafer.
 On the top of the implanted silicon, an epitaxial layer is grown.
 The process is repeated three times. 
 Finally, after the last epitaxial growth, common processes used for standard planar sensors are applied e.g.\ edging and preparation of readout implants.
 
 As the CVD process imposes a large temperature budget on the implants, the process simulations have been executed in order to quantify a possible effect on the ELAD sensors performance. 
-The results of the process simulations on a deep Boron implant after three 20\,min temperature cycles show a change in the size of the deep implant in a range less than 1\,$\muup$m.
+The results of the process simulations on a buried Boron implant after three 20\,min temperature cycles show a change in the size of the buried implant in a range less than 1\,$\muup$m.
 The electric field and transient simulations have been validated according to this change in size, and show no effect on the $\etaup$-function performance.
 
 
 \section{Conclusions}
 Development of the ELAD sensor is a new technologically-challenging project in silicon vertex sensors for high energy physics. 
-In the ELAD sensors, active charge sharing is used in order to improve the position resolution without using a magnetic field or sensor tilt.
+In the ELAD sensors, a dedicated charge sharing mechanism is used in order to improve the position resolution without using a magnetic field or sensor tilt.
 The charge-sharing effect is achieved by changing the path of the charge carriers in the lateral direction in the bulk of the sensor.
-The well-tuned deep-implant structure creates a non-homogeneous electric field.
+The well-tuned buried implant structure creates a non-homogeneous electric field.
 Two types of sensors, n-ELAD and p-ELAD sensors, have been presented.
-The electric-field simulations for the 2D and 3D geometries show the electric field in the lateral direction created by the deep implants.
-The electric-field and transient simulations show the dependence of the $\etaup$-function, and hence spatial resolution, in the ELAD sensors on the deep-implant concentration at a fixed pitch size.
+The electric-field simulations for the 2D and 3D geometries show the electric field in the lateral direction created by the buried implants.
+The electric-field and transient simulations show the dependence of the $\etaup$-function, and hence spatial resolution, in the ELAD sensors on the buried implant concentration at a fixed pitch size.
 The TCAD simulations show a nearly linear $\etaup$-function for $n\mathrm{_{di}}$~=~2.4$\mathrm{\cdot10^{15}\,cm^{-3}}$ at a bias voltage of U~=~300\,V for the p-ELAD sensor,
  demonstrating the possibility to obtain almost the theoretical optimum of charge sharing.
 The electric field profiles from 2D and 3D simulations will be used as input for Monte Carlo-based position resolution studies.
