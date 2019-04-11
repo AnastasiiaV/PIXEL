@@ -70,6 +70,7 @@ Additionally, the foreseen production technique combining silicon epitaxy and io
 
 \section{Introduction}
 \label{sec:intro}
+%FIXME add reference for ILC cdr and clic yellow report
 Experiments at possible future colliders like CLIC\footnote{Compact Linear Collider}~\cite{cdr} and ILC\footnote{International Linear Collider}~\cite{ILCcdr} aim, among others,
  for a precise measurement of Higgs decays to pairs of b-quarks, c-quarks and gluons and efficient identification of top quarks in the decay t$\mathrm{\rightarrow}$Wb.
 To this end, the experiments require light-weight detectors with a single-point resolution of a few micrometers. 
@@ -109,12 +110,16 @@ The concept of the ELAD sensor relies on a dedicated charge sharing mechanism in
  yielding a position-dependent charge collection by two electrodes~\cite{hj}.
 To this end the electric field profile is altered by implants with higher doping concentration with respect to the background doping concentration of the bulk. 
 This changes the electric field lines in such a way that the charge carriers move towards the centre between two electrodes, and might diffuse into the next unit cell, leading to a partial collection at both electrodes.
-An optimal position resolution is achieved if the distribution of the collected charge between two electrodes is a linear function of the MIP position ($\etaup$-function).
-Our realisation of an ELAD sensor contains two types of buried implants: p-implants and n-implants, effectively reducing the impact of the additional fixed charges on $N\mathrm{_{eff}}$~\cite{elad}. 
+An optimal position resolution is achieved if the distribution of the collected charge between two electrodes is a linear function of the particle's impact position, 
+ i.e.\ the entirety of the charge is collected at one electrode if the impact position is in the centre of the readout electrode,
+ the charge is equally shared between two electrodes if the impact position is half-way between two electrodes
+ and in between the shared fraction of the charge increases linearly with the distance to the electrode's centre.
+Our realisation of an ELAD sensor contains two types of buried implants: p-implants and n-implants, effectively reducing the impact of the additional stationary charges on $N\mathrm{_{eff}}$~\cite{elad}. 
 With such a balancing of p- and n-implants, a similar depletion voltage as in a standard planar sensor with an epitaxial layer of the same background concentration and thickness is achieved.
 The utilisation of two types of buried implants also creates a stronger electric field in the lateral direction, thereby improving the charge-sharing behaviour.
 The buried implants are arranged in layers forming a trapezoidal area in which the drift is altered. 
 
+%FIXME add ELAD concept figure indicating already the trapezoidal area for the c.s. mechanism
 \begin{figure}[t]
   \centering
   
@@ -160,12 +165,15 @@ The electric field simulations are performed in a quasi-stationary mode, in whic
 The voltage is ramped incrementally to a target value; in each step the electric field profile is calculated
  by solving the Poisson's equation with the charge density from the previous iteration as starting value.
 
+%FIXME a) doping of s.s. , 
+%all same size, 
+%mention all in text
 \begin{figure}[t!]
   \centering
   \includegraphics[width=0.20\textwidth]{figures/nelad2}\put(-30,-15){a)}
   \includegraphics[width=0.20\textwidth]{figures/pssel.pdf}\put(-30,-15){b)}
   \includegraphics[width=0.20\textwidth]{figures/nelad2}\put(-30,-15){c)}
-  \includegraphics[width=0.20\textwidth]{figures/peladel.pdf}\put(-30,-15){b)}
+  \includegraphics[width=0.20\textwidth]{figures/peladel.pdf}\put(-30,-15){d)}
   \hfill 
   \includegraphics[trim=-40 120 0 0, height=6.1cm]{figures/legel.pdf}
   \caption{
