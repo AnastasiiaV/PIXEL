@@ -103,12 +103,12 @@ Finally, the production technique is outlined in Sec.~\ref{sec:pr}.
 \label{sec:con}
 Charged particles traversing a silicon sensor create free electron-hole pairs, which drift inside the sensor following the electric field lines.
 Due to insufficient diffusion in thin, depleted, standard planar sensors the created charge is collected almost entirely by the nearest electrode and only a small fraction of it by the neighbouring electrode.
-Therefore, in this particular case, an improved position resolution is achieved only by downsizing the distance between strips/pixels, i.e. the pitch size.
+Therefore, in this particular case, an improved position resolution is achieved by downsizing the distance between strips/pixels, i.e.\ the pitch size.
 
 %FIXME add ELAD concept figure indicating already the trapezoidal area for the c.s. mechanism
 \begin{figure}[t]
   \centering
-  \vspace{5.5cm}
+  \vspace{4cm}
   \caption{
 A sketch of the charge sharing mechanism in ELAD sensors. 
 Arrows indicate the direction of the field strength. 
@@ -159,11 +159,13 @@ The electric field lines for b) a standard planar n-type sensor and d) the n-ELA
   \label{fig:el}
 \end{figure}
 
+
 Two types of ELAD sensors have been designed -- p-in-n (n-ELAD) and n-in-p (p-ELAD~\cite{elad}) sensors.
 The n-ELAD sensor is formed by an n-type substrate in combination with three n-type epitaxial layers (resulting from the production process),
  three interjacent buried implant layers, each containing one buried p-implant with its centre in the middle between two readout implants and two adjacent n-implants,
  p-type readout implants and a backplane implant.
-The design of the n-ELAD sensor is shown in Fig.~\ref{fig:el}, where RO$_{\textrm{l}}$ and RO$_{\textrm{r}}$ denote the left and the right readout electrodes.
+The design of the n-ELAD sensor is shown in Fig.~\ref{fig:el}~c), where RO$_{\textrm{l}}$ and RO$_{\textrm{r}}$ denote the left and the right readout electrodes.
+For comparison, a standard planar n-type sensor is shown in a).
 Orange (blue) areas represent buried n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
 The distance from the top of the sensor to the first buried implant layer is 10\,$\muup$m, the distance between buried implant layers is 10\,$\muup$m, the total thickness of the epitaxial layer amounts to 30\,$\muup$m.
 Analogously, the p-ELAD sensor is formed by a p-type substrate and three p-type epitaxial layers,
@@ -188,20 +190,7 @@ The electric field simulations are performed in a quasi-stationary mode, in whic
 The voltage is ramped incrementally to a target value; in each step the electric field profile is calculated
  by solving the Poisson's equation with the charge density from the previous iteration as starting value.
 
-In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for a) a standard, planar n-type sensor and b) the n-ELAD sensor
- with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
-The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
-In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
-Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
-
-In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for a) a standard, planar n-type sensor and b) the n-ELAD sensor
- with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
-The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
-In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
-Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
-
-
-\begin{figure}[b!]
+\begin{figure}[t!]
  \centering
   \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns_lat_ef.eps}\put(-30,-15){a)}
    \hfill 
@@ -219,6 +208,12 @@ The lateral electric field component for a) a standard planar n-sensor and b) - 
 }
   \label{fig:ef}
 \end{figure}
+
+In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for b) a standard, planar n-type sensor and d) the n-ELAD sensor
+ with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
+The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
+In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
+Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
 
 Figure~\ref{fig:ef} shows the electric field profile in the lateral direction for a) a standard, planar n-type sensor
  and b) - e) the n-ELAD sensor with different buried implant concentrations
@@ -275,7 +270,8 @@ MIP incident positions have been simulated at 0\,$\muup$m (centre of \textit{lef
   \hfill 
   \includegraphics[trim=0.cm -7.5cm 0.cm 0.cm, width = 0.047\textwidth]{figures/eps/tr_leg.pdf}
   \caption{
-The hole current density for a) - d) the n-ELAD sensor with $n\mathrm{_{di}} =2.8\mathrm{\cdot10^{15}\,cm^{-3}}$ and e) a standard planar n-sensor is shown at four different points in time for a MIP incident of 16.9\,$\muup$m at $U=280$\,V.
+The hole current density for the n-ELAD sensor with $n\mathrm{_{di}} = 2.8\mathrm{\cdot10^{15}\,cm^{-3}}$ is shown in a) - d) at four different points in time for a MIP incident of 16.9\,$\muup$m at $U=280$\,V.
+In e), the hole current density is shown at $t=2\,$ns for a standard planer n-type sensor.
 }
   \label{fig:tr}
 \end{figure}
@@ -310,7 +306,7 @@ If the applied voltage is too low (too high) the effect of the charge sharing by
   \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/neladConc.eps}\put(-210,200){a)} \hfill
   \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/peladConc.eps}\put(-210,200){b)}
   \caption[]{
-The $\etaup$-function for different buried implant concentrations for a) the n-ELAD sensor at $U=280$\,V and b) p-ELAD sensor at $U=300$\,V. 
+The $\etaup$-function for different buried implant concentrations for a) the n-ELAD sensor at $U=280$\,V and b) the p-ELAD sensor at $U=300$\,V. 
 Continuous lines between data points guide the eye.
 }
   \label{fig:eta}
@@ -322,6 +318,7 @@ Continuous lines between data points guide the eye.
   \includegraphics[trim={1.cm 0cm 1.cm 0cm}, width = 0.48\textwidth]{figures/peladRO.eps}\put(-210,200){b)}
   \caption[]{
 The $\etaup$-function for different sizes of the readout implant for a) the n-ELAD sensor at $U=275$\,V and b) the p-ELAD sensor at $U=300$\,V.
+Continuous lines between data points guide the eye. 
 }
   \label{fig:rosize}
 \end{figure}
