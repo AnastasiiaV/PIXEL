@@ -108,7 +108,7 @@ Therefore, in this particular case, an improved position resolution is achieved 
 %FIXME add ELAD concept figure indicating already the trapezoidal area for the c.s. mechanism
 \begin{figure}[t]
   \centering
-  \vspace{4cm}
+  \includegraphics[height=4cm]{figures/eps/concept3.pdf}\put(-268, 115){RO}\put(-165, 115){RO}\put(-62, 115){RO}\put(-265, 28){\rotatebox{90}{\scriptsize unit cell boundary}}\put(-161.5, 28){\rotatebox{90}{\scriptsize unit cell boundary}}\put(-58, 28){\rotatebox{90}{\scriptsize unit cell boundary}}
   \caption{
 A sketch of the charge sharing mechanism in ELAD sensors. 
 Arrows indicate the direction of the field strength. 
@@ -141,17 +141,22 @@ The buried implants are arranged in layers forming a trapezoidal area in which t
 %mention all in text
 \begin{figure}[t!]
   \centering
-  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns.eps}\put(-25,-15){a)}\put(-60,190){RO$_{\textrm{l}}$}\put(-15,190){RO$_{\textrm{r}}$}
+  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns.eps}\put(-30,-15){a)}\put(-58, 192){$\mathrm{RO_{l}}$}\put(-15, 192){$\mathrm{RO_{r}}$}
+   \hfill 
   \includegraphics[trim=0.cm -8cm 0.cm 0.cm, height=6.1cm]{figures/eps/neladleg.pdf}
-  \hfill
-  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns_ef.eps}\put(-35,-15){b)}
+   \hfill 
+  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns_ef.eps}\put(-30,-15){b)}
+   \hfill 
   \includegraphics[trim=0.cm -9cm 0.cm 0.cm, height=6.1cm]{figures/eps/nelad_ef_leg.pdf}
-  \hfill
-  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/nelad.eps}\put(-25,-15){c)}\put(-60,190){RO$_{\textrm{l}}$}\put(-15,190){RO$_{\textrm{r}}$}
+   \hfill 
+  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/nelad.eps}\put(-30,-15){c)}\put(-58, 192){$\mathrm{RO_{l}}$}\put(-15, 192){$\mathrm{RO_{r}}$}
+   \hfill 
   \includegraphics[trim=0.cm -8cm 0.cm 0.cm, height=6.1cm]{figures/eps/neladleg.pdf}
-  \hfill
-  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/nelad_ef.eps}\put(-35,-15){d)}
+   \hfill 
+  \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/nelad_ef.eps}\put(-30,-15){d)}
+   \hfill 
   \includegraphics[trim=0.cm -9cm 0.cm 0.cm, height=6.1cm]{figures/eps/nelad_ef_leg.pdf}
+   \hfill 
   \caption{
 Doping concentration of a) a standard planer sensor and c) the n-ELAD sensor is shown. 
 The electric field lines for b) a standard planar n-type sensor and d) the n-ELAD sensor with $n\mathrm{_{di}} = 2.8\mathrm{\cdot10^{15}\,cm^{-3}}$ at $U=280$\,V.
@@ -190,6 +195,12 @@ The electric field simulations are performed in a quasi-stationary mode, in whic
 The voltage is ramped incrementally to a target value; in each step the electric field profile is calculated
  by solving the Poisson's equation with the charge density from the previous iteration as starting value.
 
+In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for a) a standard, planar n-type sensor and b) the n-ELAD sensor
+ with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
+The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
+In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
+Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
+
 \begin{figure}[t!]
  \centering
   \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns_lat_ef.eps}\put(-30,-15){a)}
@@ -208,12 +219,6 @@ The lateral electric field component for a) a standard planar n-sensor and b) - 
 }
   \label{fig:ef}
 \end{figure}
-
-In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for b) a standard, planar n-type sensor and d) the n-ELAD sensor
- with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
-The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
-In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
-Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
 
 Figure~\ref{fig:ef} shows the electric field profile in the lateral direction for a) a standard, planar n-type sensor
  and b) - e) the n-ELAD sensor with different buried implant concentrations
