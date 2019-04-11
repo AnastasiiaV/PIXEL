@@ -106,10 +106,22 @@ Charged particles traversing a silicon sensor create free electron-hole pairs, w
 Due to insufficient diffusion in thin, depleted, standard planar sensors the created charge is collected almost entirely by the nearest electrode and only a small fraction of it by the neighbouring electrode.
 Therefore, in this particular case, an improved position resolution is achieved only by downsizing the distance between strips/pixels, i.e. the pitch size.
 
+%FIXME add ELAD concept figure indicating already the trapezoidal area for the c.s. mechanism
+\begin{figure}[t]
+  \centering
+  \vspace{5.5cm}
+  \caption{
+A sketch of the charge sharing mechanism in ELAD sensors. 
+Arrows indicate the direction of the field strength. 
+}
+  \label{fig:concept}
+\end{figure}
+
 The concept of the ELAD sensor relies on a dedicated charge sharing mechanism independent of sensor tilt and magnetic fields by means of local modifications to the electric field,
  yielding a position-dependent charge collection by two electrodes~\cite{hj}.
 To this end the electric field profile is altered by implants with higher doping concentration with respect to the background doping concentration of the bulk. 
-This changes the electric field lines in such a way that the charge carriers move towards the centre between two electrodes, and might diffuse into the next unit cell, leading to a partial collection at both electrodes.
+This changes the electric field lines in such a way that the charge carriers move towards the centre between two electrodes, and might diffuse into the next unit cell, leading to a partial collection at both electrodes,
+ see Fig.~\ref{fig:concept}.
 An optimal position resolution is achieved if the distribution of the collected charge between two electrodes is a linear function of the particle's impact position, 
  i.e.\ the entirety of the charge is collected at one electrode if the impact position is in the centre of the readout electrode,
  the charge is equally shared between two electrodes if the impact position is half-way between two electrodes
@@ -119,28 +131,37 @@ With such a balancing of p- and n-implants, a similar depletion voltage as in a 
 The utilisation of two types of buried implants also creates a stronger electric field in the lateral direction, thereby improving the charge-sharing behaviour.
 The buried implants are arranged in layers forming a trapezoidal area in which the drift is altered. 
 
-%FIXME add ELAD concept figure indicating already the trapezoidal area for the c.s. mechanism
-\begin{figure}[t]
-  \centering
-  
-  \caption{
-A sketch of the charge sharing mechanism in ELAD sensors. 
-Arrows indicate the direction of the total field strength. 
-}
-  \label{fig:geom}
-\end{figure}
-
 
  
 
 \section{TCAD simulations}
 \label{sec:sim}
 
+%FIXME a) doping of s.s. , 
+%all same size, 
+%mention all in text
+\begin{figure}[t!]
+  \centering
+  \includegraphics[trim=0 0 95 0,width=0.20\textwidth]{figures/nelad}\put(-25,-15){a)}\put(-45,190){RO$_{\textrm{l}}$}\put(0,190){RO$_{\textrm{r}}$}
+  \hfill
+  \includegraphics[width=0.205\textwidth]{figures/pssel.pdf}\put(-35,-15){b)}
+  \includegraphics[trim=0 0 95 0,width=0.20\textwidth]{figures/nelad}\put(-25,-15){c)}\put(-45,190){RO$_{\textrm{l}}$}\put(0,190){RO$_{\textrm{r}}$}
+  \hfill
+  \includegraphics[width=0.205\textwidth]{figures/peladel.pdf}\put(-35,-15){d)}
+  \hfill 
+  \includegraphics[trim=-40 120 0 0, height=6.1cm]{figures/legel.pdf}
+  \caption{
+Doping concentration of a) a standard planer sensor and c) the n-ELAD sensor is shown. 
+The electric field lines for b) a standard planar n-type sensor and d) the n-ELAD sensor with $n\mathrm{_{di}} = 2.8\mathrm{\cdot10^{15}\,cm^{-3}}$ at $U=280$\,V.
+}
+  \label{fig:el}
+\end{figure}
+
 Two types of ELAD sensors have been designed -- p-in-n (n-ELAD) and n-in-p (p-ELAD~\cite{elad}) sensors.
 The n-ELAD sensor is formed by an n-type substrate in combination with three n-type epitaxial layers (resulting from the production process),
  three interjacent buried implant layers, each containing one buried p-implant with its centre in the middle between two readout implants and two adjacent n-implants,
  p-type readout implants and a backplane implant.
-The design of the n-ELAD sensor is shown in Fig.~\ref{fig:geom}, where RO$_{\textrm{left}}$ and RO$_{\textrm{right}}$ denote the two relevant readout electrodes within one unit cell.
+The design of the n-ELAD sensor is shown in Fig.~\ref{fig:el}, where RO$_{\textrm{l}}$ and RO$_{\textrm{r}}$ denote the left and the right readout electrodes.
 Orange (blue) areas represent buried n-implants (p-implants), with a light-green (dark-green) colour showing the epitaxial zone (wafer) of the sensor. 
 The distance from the top of the sensor to the first buried implant layer is 10\,$\muup$m, the distance between buried implant layers is 10\,$\muup$m, the total thickness of the epitaxial layer amounts to 30\,$\muup$m.
 Analogously, the p-ELAD sensor is formed by a p-type substrate and three p-type epitaxial layers,
@@ -165,32 +186,7 @@ The electric field simulations are performed in a quasi-stationary mode, in whic
 The voltage is ramped incrementally to a target value; in each step the electric field profile is calculated
  by solving the Poisson's equation with the charge density from the previous iteration as starting value.
 
-%FIXME a) doping of s.s. , 
-%all same size, 
-%mention all in text
 \begin{figure}[t!]
-  \centering
-  \includegraphics[width=0.20\textwidth]{figures/nelad2_pp}\put(-30,-15){a)}
-  \includegraphics[width=0.20\textwidth]{figures/pssel.pdf}\put(-30,-15){b)}
-  \includegraphics[width=0.20\textwidth]{figures/nelad2_pp}\put(-30,-15){c)}
-  \includegraphics[width=0.20\textwidth]{figures/peladel.pdf}\put(-30,-15){d)}
-  \hfill 
-  \includegraphics[trim=-40 120 0 0, height=6.1cm]{figures/legel.pdf}
-  \caption{
-Doping concentration of a) a standard planer sensor and c) the n-ELAD sensor is shown. 
-The electric field lines for b) a standard planar n-type sensor and d) the n-ELAD sensor with $n\mathrm{_{di}} = 2.8\mathrm{\cdot10^{15}\,cm^{-3}}$ at $U=280$\,V.
-}
-  \label{fig:el}
-\end{figure}
-
-In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for a) a standard, planar n-type sensor and b) the n-ELAD sensor
- with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
-The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
-In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
-Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
-
-
-\begin{figure}[b!]
  \centering
   \includegraphics[width=0.18\textwidth]{figures/elf_0.pdf}\put(-30,-15){a)}
   \includegraphics[width=0.18\textwidth]{figures/elf_1.pdf}\put(-30,-15){b)}
@@ -203,6 +199,12 @@ The lateral electric field component for a) a standard planar n-sensor and b) - 
 }
   \label{fig:ef}
 \end{figure}
+
+In Fig.~\ref{fig:el} the total electric field with its electric field lines is presented for a) a standard, planar n-type sensor and b) the n-ELAD sensor
+ with a total thickness of 150~$\muup$m and a thickness of the epitaxial layer of 30~$\muup$m.
+The electric field lines in the standard planar n-type sensor lead directly to the readout electrodes. 
+In the n-ELAD sensor, the electric field lines change their behaviour with respect to the standard planar sensor, effectively pointing to the centre between two readout electrodes. 
+Hence, the buried implants create a lateral electric field component the bulk of the sensor rendering a position-dependent charge sharing possible.
 
 Figure~\ref{fig:ef} shows the electric field profile in the lateral direction for a) a standard, planar n-type sensor
  and b) - e) the n-ELAD sensor with different buried implant concentrations

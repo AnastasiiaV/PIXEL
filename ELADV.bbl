@@ -35,7 +35,7 @@ A.~M. Nurnberg and D.~Dannheim, ``{Requirements for the CLIC tracker
 
 \bibitem{clicyellowreport}
 \BIBentryALTinterwordspacing
-e.~D.~Dannheim~et al., ``Detector technologies for clic,'' Geneva, 2018.
+D.~Dannheim \emph{et~al.}, ``Detector technologies for clic,'' Geneva, 2018.
   [Online]. Available: \url{https://edms.cern.ch/document/2053288/}
 \BIBentrySTDinterwordspacing
 
