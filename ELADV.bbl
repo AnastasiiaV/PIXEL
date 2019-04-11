@@ -33,6 +33,12 @@ A.~M. Nurnberg and D.~Dannheim, ``{Requirements for the CLIC tracker
   \url{https://cds.cern.ch/record/2261066}
 \BIBentrySTDinterwordspacing
 
+\bibitem{clicyellowreport}
+\BIBentryALTinterwordspacing
+D.~Dannheim \emph{et~al.}, ``Detector technologies for clic,'' Geneva, 2018.
+  [Online]. Available: \url{https://edms.cern.ch/document/2053288/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{simon}
 \BIBentryALTinterwordspacing
 S.~Spannagel, ``Test beam performance measurements for the phase i upgrade of
