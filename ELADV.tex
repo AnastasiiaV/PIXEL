@@ -69,7 +69,7 @@ Additionally, the foreseen production technique combining silicon epitaxy and io
 
 \section{Introduction}
 \label{sec:intro}
-%FIXME add reference for ILC cdr
+
 Experiments at possible future colliders like CLIC\footnote{Compact Linear Collider}~\cite{cdr} and ILC\footnote{International Linear Collider}~\cite{ILCcdr} aim, among others,
  for a precise measurement of Higgs decays to pairs of b-quarks, c-quarks and gluons and efficient identification of top quarks in the decay t$\mathrm{\rightarrow}$Wb.
 To this end, the experiments require light-weight detectors with a single-point resolution of a few micrometers. 
@@ -105,7 +105,6 @@ Charged particles traversing a silicon sensor create free electron-hole pairs, w
 Due to insufficient diffusion in thin, depleted, standard planar sensors the created charge is collected almost entirely by the nearest electrode and only a small fraction of it by the neighbouring electrode.
 Therefore, in this particular case, an improved position resolution is achieved by downsizing the distance between strips/pixels, i.e.\ the pitch size.
 
-%FIXME add ELAD concept figure indicating already the trapezoidal area for the c.s. mechanism
 \begin{figure}[t]
   \centering
   \includegraphics[height=4cm]{figures/eps/concept3.pdf}\put(-268, 115){RO}\put(-165, 115){RO}\put(-62, 115){RO}\put(-265, 28){\rotatebox{90}{\scriptsize unit cell boundary}}\put(-161.5, 28){\rotatebox{90}{\scriptsize unit cell boundary}}\put(-58, 28){\rotatebox{90}{\scriptsize unit cell boundary}}
@@ -136,9 +135,6 @@ The buried implants are arranged in layers forming a trapezoidal area in which t
 \section{TCAD simulations}
 \label{sec:sim}
 
-%FIXME a) doping of s.s. , 
-%all same size, 
-%mention all in text
 \begin{figure}[t!]
   \centering
   \includegraphics[trim=0.5cm 0.5cm 0.5cm 2.1cm, width = 0.18\textwidth, clip]{figures/eps/ns.eps}\put(-30,-15){a)}\put(-58, 192){$\mathrm{RO_{l}}$}\put(-15, 192){$\mathrm{RO_{r}}$}
@@ -234,7 +230,7 @@ The electric field in the longitudinal direction is created by the applied volta
 The ratio between the longitudinal and lateral components of the electric field changes with the applied voltage and buried implant concentrations.
 Identification of the optimal operational voltage allows an effective usage of the ELAD sensor.
 
-%FIXME add 1D el field comparison
+%FIXME 
 % update caption
 \begin{figure}[t!]
   \centering
@@ -245,8 +241,8 @@ Identification of the optimal operational voltage allows an effective usage of t
  % \includegraphics[height=6.1cm]{figures/eps/cut_ef_x.eps}\put(-100,5){b)}
   \hfill 
   \caption{
-3D simulation of an electric field in the lateral direction in the n-ELAD sensor with a buried implant concentration $n\mathrm{_{di}} = 2.8\mathrm{\cdot10^{15}\,cm^{-3}}$
- with a) a strip readout, 2D electric field cut of b) 2D simulation b) 3D simulation at $U=280\,$V.}
+3D simulation of the electric field in the lateral direction in the n-ELAD sensor with a buried implant concentration $n\mathrm{_{di}} = 2.8\mathrm{\cdot10^{15}\,cm^{-3}}$ with a strip readout. 
+In b) the field strength for 2D and 3D are compared at WHERE?}
   \label{fig:3d}
 \end{figure}
 
@@ -308,8 +304,8 @@ If the applied voltage is too low (too high) the effect of the charge sharing by
 
 \begin{figure}[t!]
   \centering
-  \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/neladConc.eps}\put(-210,200){a)} \hfill
-  \includegraphics[trim=1.cm 0cm 1.cm 2cm, width = 0.48\textwidth]{figures/peladConc.eps}\put(-210,200){b)}
+  \includegraphics[trim=1.cm 0cm 1.cm 1.5cm, width = 0.48\textwidth]{figures/neladConc.eps}\put(-220,170){a)} \hfill
+  \includegraphics[trim=1.cm 0cm 1.cm 1.5cm, width = 0.48\textwidth]{figures/peladConc.eps}\put(-220,170){b)}
   \caption[]{
 The $\etaup$-function for different buried implant concentrations for a) the n-ELAD sensor at $U=280$\,V and b) the p-ELAD sensor at $U=300$\,V. 
 Continuous lines between data points guide the eye.
@@ -319,8 +315,8 @@ Continuous lines between data points guide the eye.
 
 \begin{figure}[t!]
   \centering
-  \includegraphics[trim={1.cm 0cm 1.cm 0cm}, width = 0.48\textwidth]{figures/neladRO.eps}\put(-210,200){a)} \hfill
-  \includegraphics[trim={1.cm 0cm 1.cm 0cm}, width = 0.48\textwidth]{figures/peladRO.eps}\put(-210,200){b)}
+  \includegraphics[trim={1.cm 0cm 1.cm 1.5cm}, width = 0.48\textwidth]{figures/neladRO.eps}\put(-220,170){a)} \hfill
+  \includegraphics[trim={1.cm 0cm 1.cm 1.5cm}, width = 0.48\textwidth]{figures/peladRO.eps}\put(-220,170){b)}
   \caption[]{
 The $\etaup$-function for different sizes of the readout implant for a) the n-ELAD sensor at $U=275$\,V and b) the p-ELAD sensor at $U=300$\,V.
 Continuous lines between data points guide the eye. 
@@ -368,7 +364,7 @@ Additionally, new manufacturing technique foreseen for the ELAD prototype produc
 
 {\small
 \bibliographystyle{IEEEtran}
-\bibliography{bibtex/refs.bib}
+\bibliography{bibtex/refs}
 }
 
 
